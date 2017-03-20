@@ -1,3 +1,5 @@
+package routegenerator;
+
 public class Destination {
     private String name;
     private Destination dependency;

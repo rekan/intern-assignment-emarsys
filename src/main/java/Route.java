@@ -1,9 +1,8 @@
 import java.util.List;
 
 public class Route {
-    private List<Destination> destinations;
 
-    public List<Destination> generateRoute() {
-        return null;
+    public static List<Destination> generateRoute(List<Destination> destinations) {
+        return destinations;
     }
 }

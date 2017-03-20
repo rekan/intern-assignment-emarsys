@@ -16,7 +16,7 @@ public class RouteTest {
     public void generateRoute_oneDestination_returnsOneDestination() throws Exception {
         Destination x = new Destination("x");
         List<Destination> allDest = new ArrayList<Destination>(Arrays.asList(x));
-        assertEquals(Arrays.asList(x), Route.generateRoute(allDest));
+        assertEquals(Arrays.asList("x"), Route.generateRoute(allDest));
     }
 
     @Test
@@ -25,6 +25,6 @@ public class RouteTest {
         Destination y = new Destination("y");
         Destination z = new Destination("z");
         List<Destination> allDest = new ArrayList<Destination>(Arrays.asList(x, y, z));
-        assertEquals(Arrays.asList(x, y, z), Route.generateRoute(allDest));
+        assertEquals(Arrays.asList("x", "y", "z"), Route.generateRoute(allDest));
     }
 }

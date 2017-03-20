@@ -14,9 +14,17 @@ public class RouteTest {
 
     @Test
     public void generateRoute_oneDestination_returnsOneDestination() throws Exception {
-        Destination a = new Destination("a");
-        List<Destination> allDest = new ArrayList<Destination>(Arrays.asList(a));
-        assertEquals(Arrays.asList(a), Route.generateRoute(allDest));
+        Destination x = new Destination("x");
+        List<Destination> allDest = new ArrayList<Destination>(Arrays.asList(x));
+        assertEquals(Arrays.asList(x), Route.generateRoute(allDest));
     }
 
+    @Test
+    public void generateRoute_multipleDestinations_returnsUnorderedList() throws Exception {
+        Destination x = new Destination("x");
+        Destination y = new Destination("y");
+        Destination z = new Destination("z");
+        List<Destination> allDest = new ArrayList<Destination>(Arrays.asList(x, y, z));
+        assertEquals(Arrays.asList(x, y, z), Route.generateRoute(allDest));
+    }
 }

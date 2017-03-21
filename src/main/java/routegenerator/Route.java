@@ -43,6 +43,9 @@ public class Route {
                                 ordered.add(current);
                             }
                 }
+                if (!ordered.contains(d)) {
+                    ordered.add(d);
+                }
             }
         }
         List<String> result = new ArrayList<String>();
